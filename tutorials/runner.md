@@ -1,6 +1,8 @@
+https://www.defold.com/tutorials/runner/
+
 # Runner tutorial
 
-In this tutorial we start with an empty project and build a complete runner game with an animated character, physics collision, pickups and scoring. Before we begin, take a moment and try the game and get a feel for what we are about to create:
+**In this tutorial we start with an empty project and build a complete runner game with an animated character, physics collision, pickups and scoring. Before we begin, take a moment and try the game and get a feel for what we are about to create:**
 
 There is a lot to take in when learning a new game engine, so we have created this tutorial to get you started. It is a fairly complete tutorial that walks through how the engine and the editor works. We assume that you have some famililiarity with programming.
 
@@ -8,13 +10,13 @@ If you need an introduction to Lua programming, check out our [Lua in Defold man
 
 If you feel that this tutorial is a bit too much to begin with, please check out our [tutorials page](https://www.defold.com/tutorials) where we have a selection of tutorials of varied difficulty.
 
-If you prefer to watch video tutorials, please check out the video version on Youtube.
+If you prefer to watch video tutorials, please check out [the video version on Youtube](https://www.youtube.com/playlist?list=PLXsXu5srjNlxtYPQ_YJQSxJG2AN9OVS5b).
 
 We use game assets from two other tutorials, with some small modifications. The tutorial is divided into several steps, with each part taking us a significant step towards the final game.
 
 The end result will be a game where you control a frog that runs through an environments, collecting coins and avoiding obstacles. The frog runs at fixed speed and the player controls only the frog’s jumping by the press of a single button (or screen touch on a mobile device). The level consists of an endless stream of platforms to jump on - and of coins to collect.
 
-If you at any point get stuck on this tutorial or when creating your game don’t hesitate to ask us for help at the Defold Forum. In the forum you can discuss Defold, ask for help from the Defold team, see how other game developers solved their problems and find new inspiration. Get started now.
+If you at any point get stuck on this tutorial or when creating your game don’t hesitate to ask us for help at the [Defold Forum](https://forum.defold.com/). In the forum you can discuss Defold, ask for help from the Defold team, see how other game developers solved their problems and find new inspiration. Get started now.
 
 Throughout the tutorial, detailed descriptions on concepts and how to do certain moments are marked like this paragraph. If you feel that these section go into too much detail, please skip them.
 
@@ -26,64 +28,66 @@ The first step is to download the following package. It is a zip package that co
 
 [Download asset package](https://storage.googleapis.com/defold-doc/assets/runner-assets.zip)
 
-Now it’s time to create a new project and getting it ready. If you are familiar with the process, head over to www.defold.com and log in to the dashboard. If you are not familiar with the steps, here they are.
+Now it’s time to create a new project and getting it ready. If you are familiar with the process, head over to [www.defold.com](https://www.defold.com/) and log in to the dashboard. If you are not familiar with the steps, here they are.
 
-    If you haven’t yet signed up to be a Defold developer, do so!
-    When you signed up a “Getting Started Tutorial” project was created for you. Use this project for the tutorial.
-    Alternativly you can create a new project on the Defold Dashboard. In this tutorial we choose to start from a blank slate.
+* If you haven’t yet signed up to be a Defold developer, do so!
+* When you signed up a “Getting Started Tutorial” project was created for you. Use this project for the tutorial.
+* Alternativly you can create a new project on the [Defold Dashboard](https://dashboard.defold.com/). In this tutorial we choose to start from a blank slate.
 
 The Dashboard
 
 Dashboard new project
 
-Now, if you haven’t already downloaded and installed the Defold editor, it’s time to do that. You find the download link on the Defold Dashboard. Then start the program.
+Now, if you haven’t already downloaded and installed the Defold editor, it’s time to do that. You find the download link on the [Defold Dashboard](https://dashboard.defold.com/). Then start the program.
 
 Download editor
-The editor
+# The editor
 
-The first time you start the editor, you will be prompted to log in to the Defold server where all your project data is stored. The editor starts blank, without any project open so choose File ▸ Open Project from the menu and select your newly created project. You will also be prompted to create a “branch” for the project.
+The first time you start the editor, you will be prompted to log in to the Defold server where all your project data is stored. The editor starts blank, without any project open so choose `File ▸ Open Project` from the menu and select your newly created project. You will also be prompted to create a “branch” for the project.
 
-Defold uses Git to store and sync your code between different computers or team members. A branch is a local copy of the code that is stored on your computer and you can can have multiple branches if you are working on multiple versions of your game. You can name your branch anything, but we recommend naming it “master”.
+> Defold uses Git to store and sync your code between different computers or team members. A branch is a local copy of the code that is stored on your computer and you can can have multiple branches if you are working on multiple versions of your game. You can name your branch anything, but we recommend naming it “master”.
+>
+> For the Git savvy people—the branches you create in the editor are local branches only.
+>
+> When you do that a local copy of the whole project will be created on your computer. Any changes you do to the project will be saved in the branch. Whenever you select File ▸ Synchronize from the menu, your branch will be synchronized with the project on the Defold server. This means that your changes will be sent to the server and any changes that may have happened on the server is brought to your branch. If you’re working in a team this is very powerful for collaboration.
+>
+> The Workflow documentation explains how all this works in more detail.
 
-For the Git savvy people—the branches you create in the editor are local branches only.
-
-When you do that a local copy of the whole project will be created on your computer. Any changes you do to the project will be saved in the branch. Whenever you select File ▸ Synchronize from the menu, your branch will be synchronized with the project on the Defold server. This means that your changes will be sent to the server and any changes that may have happened on the server is brought to your branch. If you’re working in a team this is very powerful for collaboration.
-
-The Workflow documentation explains how all this works in more detail.
-
-Now, in the Project Explorer you will see all files that are part of the project. If you double-click the file “main/main.collection” the file will open up in the editor view in the center:
+Now, in the *Project Explorer* you will see all files that are part of the project. If you double-click the file “main/main.collection” the file will open up in the editor view in the center:
 
 Editor overview
 
 The editor consists of the following main areas:
 
-Project Explorer
-    This is a view of all files in your project. Different file types have different icons. Double click on a file to open in in a designated editor for that file type. The special read-only folder builtins is common for all projects and include useful items like a default render script, a font, materials for rendering various components and other things.
-Main Editor View
-    Depending on which filetype you’re editing, this view will show an editor for that type. Most commonly used is the Scene editor that you see here. Each open file is shown in a separate tab.
-Changed Files
-    Contains a list of all the edits you have made in your branch since last synchronization. So if you see anything in this pane, you have changes that are not on the server yet. You can open a text-only diff and revert changes through this view.
-Outline
-    The content of the currently edited file in a hierarchical view. You can add, delete, modify and select objects and components through this view.
-Properties
-    The properties set on the currently selected object or component.
-Console
-    When running the game, this view captures output (logging, errors, debug info etc) coming from the game engine, and also any custom print() and pprint() debug messages from your scripts. If your app or game won’t start the console is the first thing to check. Behind the console are a set of tabs displaying error information as well as a curve editor that is used when building particle effects.
+<dl>
+<dt>Project Explorer</dt>
+    <dd>This is a view of all files in your project. Different file types have different icons. Double click on a file to open in in a designated editor for that file type. The special read-only folder <i>builtins<i> is common for all projects and include useful items like a default render script, a font, materials for rendering various components and other things.</dd>
+<dt>Main Editor View</dt>
+    <dd>Depending on which filetype you’re editing, this view will show an editor for that type. Most commonly used is the Scene editor that you see here. Each open file is shown in a separate tab.</dd>
+<dt>Changed Files</dt>
+    <dd>Contains a list of all the edits you have made in your branch since last synchronization. So if you see anything in this pane, you have changes that are not on the server yet. You can open a text-only diff and revert changes through this view.</dd>
+<dt>Outline</dt>
+    <dd>The content of the currently edited file in a hierarchical view. You can add, delete, modify and select objects and components through this view.</dd>
+<dt>Properties</dt>
+    <dd>The properties set on the currently selected object or component.</dd>
+<dt>Console</dt>
+    <dd>When running the game, this view captures output (logging, errors, debug info etc) coming from the game engine, and also any custom print() and pprint() debug messages from your scripts. If your app or game won’t start the console is the first thing to check. Behind the console are a set of tabs displaying error information as well as a curve editor that is used when building particle effects.</dd>
+</dl>
 
-Running the game
+# Running the game
 
-The “Empty” project template actually isn’t completely empty. As you’ve already seen, it contains one game object with a simple image. Select Project ▸ Build and Launch to build the project and launch the game.
+The “Empty” project template actually isn’t completely empty. As you’ve already seen, it contains one game object with a simple image. Select `Project ▸ Build and Launch` to build the project and launch the game.
 
 Build and launch
 
 It’s perhaps not very exciting, but it’s a running Defold game application and we can easily modify it into something more interesting. So let’s do that.
 
-First of all, let’s clean the main.collection file of the one game object it contains.
+First of all, let’s clean the *main.collection* file of the one game object it contains.
 
-    Double click the file main.collection to open it in the editor.
-    Select (click) “go” in the Outline view to the right.
-    Right-click and select Delete from the pop up menu.
-    Save the file. Select File ▸ Save in the main menu. That’s it!
+* Double click the file main.collection to open it in the editor.
+* Select (click) “go” in the Outline view to the right.
+* Right-click and select `Delete` from the pop up menu.
+* Save the file. Select `File ▸ Save` in the main menu. That’s it!
 
 The Defold editor works on files. By double-clicking a file in the Project Explorer you open it in a suitable editor. You can then work with the contents of the file.
 
@@ -101,49 +105,51 @@ Let’s take the first baby steps and create an arena for our character, or rath
 
 [Download asset package](https://storage.googleapis.com/defold-doc/assets/runner-assets.zip)
 
-1. Import the image assets into the project by dragging the ground01.png and ground02.png image files into a suitable location in the project, for instance a new folder called images inside the main folder.
-2. Create a new Atlas file to hold the ground textures (right-click a suitable folder, for instance the main folder, in the Project Explorer and select New ▸ Atlas File). Name the atlas file level.atlas.
+1. Import the image assets into the project by dragging the *ground01.png* and *ground02.png* image files into a suitable location in the project, for instance a new folder called *images* inside the *main* folder.
+2. Create a new *Atlas* file to hold the ground textures (right-click a suitable folder, for instance the *main* folder, in the *Project Explorer* and select `New ▸ Atlas File`). Name the atlas file *level.atlas*.
 
-`An Atlas is a file that combines a set of separate images into one larger image file. The reason for doing that is to save space and also to gain performance. You can read more about Atlases and other 2D graphics features in the 2D graphics documentation.`
+> An Atlas is a file that combines a set of separate images into one larger image file. The reason for doing that is to save space and also to gain performance. You can read more about Atlases and other 2D graphics features in the 2D graphics documentation.
 
-3. Add the ground images to the new atlas by right-clicking the atlas root in the Outline and select Add Images. Select the imported images and click OK. Each image in the atlas is now accessible as a one-frame animation (still image) to use in sprites, particle effects and other visual elements. Save the file.
+3. Add the ground images to the new atlas by right-clicking the atlas root in the *Outline* and select `Add Images`. Select the imported images and click *OK*. Each image in the atlas is now accessible as a one-frame animation (still image) to use in sprites, particle effects and other visual elements. Save the file.
 
 Create new atlas
 
 Add images to atlas
 
-`Why doesn’t it work!? A common problem people have when they starting with Defold is forgetting to save! After adding images to an atlas you need to save the file before you can access that image.`
+> Why doesn’t it work!? A common problem people have when they starting with Defold is forgetting to save! After adding images to an atlas you need to save the file before you can access that image.
 
 4. Create a collection file ground.collection for the ground and add 7 game objects to it (right-click the root of the collection in the Outline view and select Add Game Object). Name the objects “ground0”, “ground1”, “ground2” etc by changing the Id property in the Properties view. Note that Defold automatically assigns new game objects a unique id.
 
-5. In each object, add a sprite component (right-click the game object in the Outline view and select Add Component, then select Sprite and click OK), set the Image property of the sprite component to the atlas you just created and set the default animation of the sprite to one of the two ground images. Set the X position of the sprite component (not the game object) to 190. Since the width of the image is 380 pixels and we shift it sideways half as many pixels, the pivot of the game object will be at the leftmost edge of the sprite image.
+5. In each object, add a sprite component (right-click the game object in the *Outline* view and select `Add Component`, then select *Sprite* and click *OK*), set the *Image* property of the sprite component to the atlas you just created and set the default animation of the sprite to one of the two ground images. Set the X position of the sprite component (not the game object) to 190. Since the width of the image is 380 pixels and we shift it sideways half as many pixels, the pivot of the game object will be at the leftmost edge of the sprite image.
 
 Create ground collection
 
-    The graphics we’re using is a bit too large so scale each game object to 60% (0.6 scaling in X and Y, resulting in 228 pixel wide ground pieces).
+6. The graphics we’re using is a bit too large so scale each game object to 60% (0.6 scaling in X and Y, resulting in 228 pixel wide ground pieces).
 
 Scale ground
 
-    Position all the game objects in line. Set the X positions of the game objects (not sprite components) to 0, 228, 456, 684, 912, 1140 and 1368 (multiples of the width 228 pixels).
+7. Position all the *game objects* in line. Set the X positions of the game objects (not sprite components) to 0, 228, 456, 684, 912, 1140 and 1368 (multiples of the width 228 pixels).
 
-It’s probably easiest to create one complete scaled game object with a sprite component and then copy it. Mark it in the Outline view, then select Edit ▸ Copy and then Edit ▸ Paste.
+> It’s probably easiest to create one complete scaled game object with a sprite component and then copy it. Mark it in the Outline view, then select Edit ▸ Copy and then Edit ▸ Paste.
 
-It is worth noticing that if you want larger or smaller tiles you can just change the scaling. However, doing so will also require that you change the X positions of all ground game objects to multiples of the new width.
+> It is worth noticing that if you want larger or smaller tiles you can just change the scaling. However, doing so will also require that you change the X positions of all ground game objects to multiples of the new width.
 
-    Save the file, then add ground.collection to the main.collection file: first double click the main.collection file, then right-click the root object in the Outline view and select Add Collection From File. In the dialog, select ground.collection and click OK. Make sure you place ground.collection in position 0, 0, 0 or it will be offset visually. Save it.
+8. Save the file, then add *ground.collection* to the *main.collection* file: first double click the *main.collection* file, then right-click the root object in the *Outline* view and select `Add Collection From File`. In the dialog, select *ground.collection* and click *OK*. Make sure you place *ground.collection* in position 0, 0, 0 or it will be offset visually. Save it.
 
-    Start up the game (Project ▸ Build and Launch to see that everything is in place.
+9. Start up the game (`Project ▸ Build and Launch` to see that everything is in place.
 
 Still ground
 
 By now you might be confused and wonder about what all these things that we have been creating really are, so let us take a moment and look at the most basic building blocks in any Defold project:
 
-Game objects
-    These are things that exist in the running game. Each game object has a location in 3D space, a rotation and scaling. It doesn’t necessarily have to be visible. A game object holds any number of components that adds abilities like graphics (sprites, tilemaps, models, spine models and particle effects), sounds, physics, factories (for spawning) and more. Lua script components can also be added to give a game object behaviors. Each game object that exist in your games has an id that you need in order to communicate with it, through message passing.
-Collections
-    Collections do not exist by themselves in a running game but are used to enable static naming of game object and at the same time allowing multiple instances of the same game object. In practice, collections are used as containers for game objects and other collections. You can use collections much like “prefabs” or “blueprints” of complex hiearchies of game objects and collections. At startup, the engine loads a main collection and breathes life to anything you have put inside it. By default this is the main.collection file in the main folder of your project, but you can change that in the project settings.
+<dl>
+<dt>Game objects</dt>
+    <dd>These are things that exist in the running game. Each game object has a location in 3D space, a rotation and scaling. It doesn’t necessarily have to be visible. A game object holds any number of components that adds abilities like graphics (sprites, tilemaps, models, spine models and particle effects), sounds, physics, factories (for spawning) and more. Lua script components can also be added to give a game object behaviors. Each game object that exist in your games has an id that you need in order to communicate with it, through message passing.</dd>
+<dt>Collections</dt>
+    <dd>Collections do not exist by themselves in a running game but are used to enable static naming of game object and at the same time allowing multiple instances of the same game object. In practice, collections are used as containers for game objects and other collections. You can use collections much like “prefabs” or “blueprints” of complex hiearchies of game objects and collections. At startup, the engine loads a main collection and breathes life to anything you have put inside it. By default this is the main.collection file in the main folder of your project, but you can change that in the project settings.</dd>
+</dl>
 
-For the time being these description probably suffices. However, a much more comprehensive dive through these things can be found in the Building blocks manual. It is a good idea to visit that manual at a later stage to get a deeper understanding on how things work in Defold.
+For the time being these description probably suffices. However, a much more comprehensive dive through these things can be found in the [Building blocks manual](https://www.defold.com/manuals/building-blocks). It is a good idea to visit that manual at a later stage to get a deeper understanding on how things work in Defold.
 
 # STEP 3 - Make the ground moving
 

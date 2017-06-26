@@ -5,8 +5,9 @@ Original documents is [Here](https://www.defold.com/learn/).
 
 Work in progress.
 
+
 Defoldゲームエンジンの非公式な和訳ドキュメントです。
 
-オリジナルドキュメントは[こちら](https://www.defold.com/learn/)にあります。
+オリジナルのドキュメントは[こちら](https://www.defold.com/learn/)にあります。
 
 現在作成中です。
