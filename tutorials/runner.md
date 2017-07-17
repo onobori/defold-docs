@@ -4,11 +4,11 @@ https://www.defold.com/tutorials/runner/
 
 **このチュートリアルでは、空のプロジェクトから始めて、アニメーション付きのキャラクターや、物理衝突、ピックアップや得点まで一通り揃ったランナーゲームを構築します。チュートリアルを始める前に、ちょっとだけゲームで遊んで、作ろうとしているものの雰囲気を掴んでください。**
 
-新しいゲームエンジンを学ぶ際には気を付けることが多くあるので、皆さんが取り掛かりやすいように我々はこのチュートリアルを用意しました。It is a fairly complete tutorial that walks through how the engine and the editor works. We assume that you have some famililiarity with programming.
+新しいゲームエンジンを学ぶ際には気を付けることが多くあるので、皆さんが取り掛かりやすいように我々はこのチュートリアルを用意しました。これはゲームエンジンとエディタの動作を俯瞰するためのしっかりしたチュートリアルです。我々は読者がある程度プログラミングに慣れ親しんでる事を想定しています。
 
-If you need an introduction to Lua programming, check out our [Lua in Defold manual](https://www.defold.com/manuals/lua).
+もしLuaプログラミングの入門書が必要なら、我々の用意した[Lua in Defold manual](https://www.defold.com/manuals/lua)を読んでみてください。
 
-If you feel that this tutorial is a bit too much to begin with, please check out our [tutorials page](https://www.defold.com/tutorials) where we have a selection of tutorials of varied difficulty.
+もしこのチュートリアルが始めるには少々分量が多いと感じたならば、どうぞ我々が難易度別に振り分けたチュートリアルをまとめた[チュートリアルページ](https://www.defold.com/tutorials)をご覧になってください。
 
 If you prefer to watch video tutorials, please check out [the video version on Youtube](https://www.youtube.com/playlist?list=PLXsXu5srjNlxtYPQ_YJQSxJG2AN9OVS5b).
 
