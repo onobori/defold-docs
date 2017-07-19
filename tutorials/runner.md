@@ -6,13 +6,13 @@ https://www.defold.com/tutorials/runner/
 
 新しいゲームエンジンを学ぶ際には気を付けることが多くあるので、皆さんが取り掛かりやすいように我々はこのチュートリアルを用意しました。これはゲームエンジンとエディタの動作を俯瞰するためのしっかりしたチュートリアルです。我々は読者がある程度プログラミングに慣れ親しんでる事を想定しています。
 
-もしLuaプログラミングの入門書が必要なら、我々の用意した[Lua in Defold manual](https://www.defold.com/manuals/lua)を読んでみてください。
+もしLuaプログラミングの入門書が必要なら、我々の用意した[DefoldにおけるLuaマニュアル](https://www.defold.com/manuals/lua)を読んでみてください。
 
 もしこのチュートリアルが始めるには少々分量が多いと感じたならば、どうぞ我々が難易度別に振り分けたチュートリアルをまとめた[チュートリアルページ](https://www.defold.com/tutorials)をご覧になってください。
 
-If you prefer to watch video tutorials, please check out [the video version on Youtube](https://www.youtube.com/playlist?list=PLXsXu5srjNlxtYPQ_YJQSxJG2AN9OVS5b).
+もしビデオチュートリアルを望むようでしたら、[Youtubeにビデオバージョン](https://www.youtube.com/playlist?list=PLXsXu5srjNlxtYPQ_YJQSxJG2AN9OVS5b)がありますのでチェックしてみてください。
 
-We use game assets from two other tutorials, with some small modifications. The tutorial is divided into several steps, with each part taking us a significant step towards the final game.
+我々は2つの別々のチュートリアルから、多少の変更を加えながらゲームアセットを使います。 チュートリアルはいくつかのステップに分割されていて、それぞれのパートで重要なステップを踏みながら、最終的なゲームに向かっていきます。
 
 The end result will be a game where you control a frog that runs through an environments, collecting coins and avoiding obstacles. The frog runs at fixed speed and the player controls only the frog’s jumping by the press of a single button (or screen touch on a mobile device). The level consists of an endless stream of platforms to jump on - and of coins to collect.
 
