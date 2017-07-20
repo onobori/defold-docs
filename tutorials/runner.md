@@ -14,7 +14,7 @@ https://www.defold.com/tutorials/runner/
 
 我々は2つの別々のチュートリアルから、多少の変更を加えながらゲームアセットを使います。 チュートリアルはいくつかのステップに分割されていて、それぞれのパートで重要なステップを踏みながら、最終的なゲームに向かっていきます。
 
-The end result will be a game where you control a frog that runs through an environments, collecting coins and avoiding obstacles. The frog runs at fixed speed and the player controls only the frog’s jumping by the press of a single button (or screen touch on a mobile device). The level consists of an endless stream of platforms to jump on - and of coins to collect.
+出来上がった結果は、障害物を避けつつコインを集めながら走るカエルを操作するゲームになります。カエルは一定の速度で走り、プレイヤーは特定の一つのボタンを押すこと(あるいはモバイル端末ならば画面をタッチすること)で、カエルをジャンプさせることによってのみ操作することが出来ます。レベルの測定は、半永久的に続くマップをどれだけジャンプしたかに加えて、どれだけコインを回収したか、によって測定されます。
 
 If you at any point get stuck on this tutorial or when creating your game don’t hesitate to ask us for help at the [Defold Forum](https://forum.defold.com/). In the forum you can discuss Defold, ask for help from the Defold team, see how other game developers solved their problems and find new inspiration. Get started now.
 
