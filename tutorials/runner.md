@@ -16,9 +16,12 @@ https://www.defold.com/tutorials/runner/
 
 出来上がった結果は、障害物を避けつつコインを集めながら走るカエルを操作するゲームになります。カエルは一定の速度で走り、プレイヤーは特定の一つのボタンを押すこと(あるいはモバイル端末ならば画面をタッチすること)で、カエルをジャンプさせることによってのみ操作することが出来ます。レベルの測定は、半永久的に続くマップをどれだけジャンプしたかに加えて、どれだけコインを回収したか、によって測定されます。
 
-If you at any point get stuck on this tutorial or when creating your game don’t hesitate to ask us for help at the [Defold Forum](https://forum.defold.com/). In the forum you can discuss Defold, ask for help from the Defold team, see how other game developers solved their problems and find new inspiration. Get started now.
+もしこのチュートリアルを進めるときやゲームを作るときに少しでも気になる点があるならば、遠慮なく[Defoldフォーラム](https://forum.defold.com/)に質問を投稿してください。このフォーラムではDefoldについて議論ができ、Defoldチームに助言を求めることができ、他のゲーム開発者がどのように自身の問題を解決し新しいインスピレーションを得ているか目撃することが出来ます。今すぐ始めましょう。
 
-Throughout the tutorial, detailed descriptions on concepts and how to do certain moments are marked like this paragraph. If you feel that these section go into too much detail, please skip them.
+```
+このチュートリアル全体を通じて、概念及び特定の状態に対する対処法の詳細な説明がこの文章のように強調されます。もしその文章が詳細すぎると感じるときは、飛ばしてしまって構いません。
+```
+
 
 So let’s begin. We hope you will have a lot of fun going through this tutorial and that it helps you getting going with Defold.
 
