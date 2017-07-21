@@ -18,11 +18,11 @@ https://www.defold.com/tutorials/runner/
 
 もしこのチュートリアルを進めるときやゲームを作るときに少しでも気になる点があるならば、遠慮なく[Defoldフォーラム](https://forum.defold.com/)に質問を投稿してください。このフォーラムではDefoldについて議論ができ、Defoldチームに助言を求めることができ、他のゲーム開発者がどのように自身の問題を解決し新しいインスピレーションを得ているか目撃することが出来ます。今すぐ始めましょう。
 
-```
+~~~
 このチュートリアル全体を通じて、概念及び特定の状態に対する対処法の詳細な説明がこの文章のように強調されます。
 
 もしその文章が詳細すぎると感じるときは、飛ばしてしまって構いません。
-```
+~~~
 
 
 So let’s begin. We hope you will have a lot of fun going through this tutorial and that it helps you getting going with Defold.
