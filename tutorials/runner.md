@@ -24,7 +24,6 @@ https://www.defold.com/tutorials/runner/
 もしその文章が詳細すぎると感じるときは、飛ばしてしまって構いません。
 ```
 
-
 So let’s begin. We hope you will have a lot of fun going through this tutorial and that it helps you getting going with Defold.
 
 # STEP 1 - Installation and setup
