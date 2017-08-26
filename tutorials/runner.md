@@ -24,30 +24,30 @@ https://www.defold.com/tutorials/runner/
 もしその文章が詳細すぎると感じるときは、飛ばしてしまって構いません。
 ```
 
-So let’s begin. We hope you will have a lot of fun going through this tutorial and that it helps you getting going with Defold.
+それでは始めましょう。このチュートリアルを通じて皆さんが大いに楽しみ、Defoldでのゲーム作りに役立てることを祈ります。
 
-# STEP 1 - Installation and setup
+# ステップ1 - インストールとセットアップ
 
-The first step is to download the following package. It is a zip package that contains all content that you need to create the tutorial game.
+最初のステップは以下のパッケージをダウンロードすることです。それはチュートリアルのゲームを作るのに必要な全ての素材が入ったzipパッケージです。
 
-[Download asset package](https://storage.googleapis.com/defold-doc/assets/runner-assets.zip)
+[アセットパッケージのダウンロード](https://storage.googleapis.com/defold-doc/assets/runner-assets.zip)
 
-Now it’s time to create a new project and getting it ready. If you are familiar with the process, head over to [www.defold.com](https://www.defold.com/) and log in to the dashboard. If you are not familiar with the steps, here they are.
+さて、新しいプロジェクトを作って取り掛かる準備が整いました。もしあなたがこの手順に慣れているなら、先頭の[www.defold.com](https://www.defold.com/)にアクセスしてダッシュボードにログインしましょう。もしDefoldでのゲーム作成に慣れていないなら、ここから始めましょう。
 
-* If you haven’t yet signed up to be a Defold developer, do so!
-* When you signed up a “Getting Started Tutorial” project was created for you. Use this project for the tutorial.
-* Alternativly you can create a new project on the [Defold Dashboard](https://dashboard.defold.com/). In this tutorial we choose to start from a blank slate.
+* もしDefold開発者の登録が済んでいないなら、登録しましょう！
+* サインアップしたら“Getting Started Tutorial”プロジェクトが作成されています。このプロジェクトを使ってチュートリアルを進めましょう。
+* 別の方法として、[Defoldダッシュボード](https://dashboard.defold.com/)から新規にプロジェクトを作成することも出来ます。このチュートリアル内では、プロジェクト内に何もない状態から始めます。
 
-The Dashboard
+ダッシュボード
 
-Dashboard new project
+ダッシュボード新規プロジェクト
 
-Now, if you haven’t already downloaded and installed the Defold editor, it’s time to do that. You find the download link on the [Defold Dashboard](https://dashboard.defold.com/). Then start the program.
+さて、まだDefoldエディターをダウンロードしてりインストールしていないならば、今がそのときです。ダウンロードリンクを[Defold Dashboard](https://dashboard.defold.com/)で見つけられると思います. さあチュートリアルを始めましょう。
 
 Download editor
-# The editor
+# エディター
 
-The first time you start the editor, you will be prompted to log in to the Defold server where all your project data is stored. The editor starts blank, without any project open so choose `File ▸ Open Project` from the menu and select your newly created project. You will also be prompted to create a “branch” for the project.
+エディターを初めて起動すると、Defoldサーバーへのログインプロンプトが表示されます。全てのDefoldプロジェクトはDefoldサーバーに保存されます。The first time you start the editor, you will be prompted to log in to the Defold server where all your project data is stored. The editor starts blank, without any project open so choose `File ▸ Open Project` from the menu and select your newly created project. You will also be prompted to create a “branch” for the project.
 
 > Defold uses Git to store and sync your code between different computers or team members. A branch is a local copy of the code that is stored on your computer and you can can have multiple branches if you are working on multiple versions of your game. You can name your branch anything, but we recommend naming it “master”.
 >
